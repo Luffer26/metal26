@@ -1,4 +1,50 @@
 .header
+    color: #fff
+    background-image: url(/img/header-bg.jpg)
     &__container
-        max-width: 1200px
+        display: flex
+        max-width: 1160px
         margin: 0 auto
+        padding: 0 20px
+        line-height: 150px
+    &__nav
+        background: #6394b4     
+            
+.nav
+    max-width: 1160px
+    padding: 0 20px
+    margin: 0 auto
+    display: flex
+    &__block
+        flex: 1
+        text-align: center
+    a
+        color: #fff
+        font-size: 24px
+        display: block
+        width: 100%
+        height: 128px
+        line-height: 128px
+        &:hover
+            background: #1f3e53
+
+.logo
+    flex: 1
+    font-size: 32px
+.contacts
+    font-size: 24px
+    display: flex
+    flex: 2
+    .block
+        flex: 1
+    &__callback-btn
+        button
+            color: #fff
+            cursor: pointer
+            margin: auto 0
+            background: linear-gradient(to top, #1e5e80 0%, #48869f 14%, #92cdd9 100%)
+            width: 180px
+            height: 36px
+            border: 0
+            border-radius: 8px
+            padding: 0

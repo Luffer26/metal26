@@ -13,10 +13,11 @@ browserSync = require("browser-sync"),
 autoprefixer = require("gulp-autoprefixer"),
 imagemin = require('gulp-imagemin'),
 pngquant = require('imagemin-pngquant'),
+wait = require("gulp-wait"),
 reload = browserSync.reload;
 
 
-gulp.task('scripts',function(){
+gulp.task('script',function(){
     return gulp.src("app/js/**/*.js")
     .pipe(plumber()) 
     .pipe(sourcemaps.init())
@@ -28,14 +29,17 @@ gulp.task('scripts',function(){
 
 gulp.task('sass', function () {
     return gulp.src('app/styles/main.sass')
+    .pipe(wait(100))
     .pipe(plumber())
     .pipe(sourcemaps.init())
-    .pipe(sass({}))
+    .pipe(sass({
+        outputStyle: 'compressed'
+    }))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
     }))
-    .pipe(cssnano())
+/*     .pipe(cssnano()) */
     .pipe(rename('main.min.css'))
     .pipe(sourcemaps.write('/maps'))
     .pipe(gulp.dest('build/style'));
@@ -50,7 +54,7 @@ gulp.task("pug", function() {
         .pipe(gulp.dest('build'))
 });
 
-gulp.task('images', function () {
+gulp.task('image', function () {
 	gulp.src("app/img/**/*.*")
 		.pipe(imagemin({
 			progressive: true,
@@ -60,7 +64,7 @@ gulp.task('images', function () {
 		}))
 		.pipe(gulp.dest("build/img"))
 });
-gulp.task('fonts', function () {
+gulp.task('font', function () {
 	gulp.src('app/fonts/**/*.*')
 	.pipe(gulp.dest("build/fonts"))
 });
@@ -77,8 +81,8 @@ gulp.task('server', function(){
 gulp.task('watch', function () {
     gulp.watch("app/pages/**/*.pug",["pug",reload])
     gulp.watch("app/styles/**/**/*.sass", ["sass",reload])        
-    gulp.watch("app/js/**/*.js",["scripts",reload])
+    gulp.watch("app/js/**/*.js",["script",reload])
     gulp.watch("build/*.html").on("change", reload);
 });
 
-gulp.task('default', ['server', 'sass', 'pug', 'fonts', 'watch', 'scripts'])
+gulp.task('default', ['server', 'sass', 'pug', 'font', 'watch', 'script'])
