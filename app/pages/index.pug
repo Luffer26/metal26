@@ -2,6 +2,11 @@ extends layout/layout
 
 block title
     title Главная
+block header
+    +header('Главная')
 block body
-    include layout/header
+    div.page-main__wrapper
+        section.home
+    include layout/footer
+    
     

@@ -1,0 +1,40 @@
+extends layout/layout
+
+block title
+    title О компании
+block header
+    +header('О компании')
+block body
+    div.page-main__wrapper
+        section.about
+            .about__content
+                h1.content__header О КОМПАНИИ
+                p.content__text Наша компания предлагает полный спектр услуг по металлообработке, отвечающих всем современным стандартам. В нашем распоряжении новейшее промышленное оборудование, поэтому мы сможем выполнить любой, даже самый сложный заказ. Наши мастера осуществят комплексную металлообработку, раскройку листового металла на координатно-пробивном прессе, гибку металла, пробивку металла,сварку металлов, изготовление корпусов и любых нестандартных конструкций из металла. Мы постоянно разрабатываем и предлагаем новые виды продукции и услуг.
+            .about__advantages
+                h2.advantages__header Преимущества
+                .advantages__item
+                    .advantages__num
+                        span 01
+                    .advantages__img
+                        i.icon.icon_advantages-01
+                    .advantages__description
+                        p Индивидуальная разработка изделий по техническому заданию
+                .advantages__item
+                    .advantages__num
+                        span 02
+                    .advantages__img
+                        i.icon.icon_advantages-02
+                    .advantages__description
+                        p Изготовление опытных образцов
+                .advantages__item
+                    .advantages__num
+                        span 03
+                    .advantages__img
+                        i.icon.icon_advantages-03
+                    .advantages__description
+                        p Изготовление сложных металлоконструкций и корпусов из листового и профильного металла
+        include layout/footer    
+    
+        
+
+    

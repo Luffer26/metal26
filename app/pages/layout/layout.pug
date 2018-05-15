@@ -1,3 +1,5 @@
+include header
+
 <!DOCTYPE html>
 html(lang="ru")
   head
@@ -10,7 +12,11 @@ html(lang="ru")
 
   body
     .wrapper
-      block body
+      block header
+      .main-content
+        include sidebar
+        .page-main
+          block body
 
     block script
       script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")

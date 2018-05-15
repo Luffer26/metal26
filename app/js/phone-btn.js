@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('.header__phone-btn').click(function() {
-        $(this).toggleClass('active');
+    $('.menu-btn').click(function() {
+        $(this).toggleClass('open');
     })
 })

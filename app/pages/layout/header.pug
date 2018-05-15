@@ -1,25 +1,36 @@
-header.header
-    .header__container
-        .logo 
-            p МЕТАЛ26
-        .contacts
-            .contacts__mail.block
-                p metal26@yandex.ru
-            .contacts__number.block
-                p +8(918) 7853444
-            .contacts__callback-btn.block
-                button Заказать звонок
+- 
+    var list = [
+    { title: 'Главная', link: 'index.html' },
+    { title: 'О компании', link: 'about-company.html' },
+    { title: 'Услиги', link: 'services.html' },
+    { title: 'Продукция ', link: 'production.html' },
+    { title: 'Контакты ', link: 'contacts.html' }
+  ]
+mixin header(activePage)
+    header.header
+        .header__container
+            .logo 
+                a(href="index.html") МЕТАЛ26
+            .contacts
+                .contacts__mail.block
+                    img.icon.icon_mail
+                    p metal26@yandex.ru
+                .contacts__number.block
+                    i.icon.icon_phone
+                    p +8(918)-785-34-44
+                .contacts__callback-btn.block
+                    button Заказать звонок
+            .menu-btn
+                span
+                span
+                span
             
     nav.header__nav
         ul.nav
-            li.nav__block 
-                a(href="#") О компании
-            li.nav__block 
-                a(href="#") Услиги 
-            li.nav__block 
-                a(href="#") Продукция 
-            li.nav__block 
-                a(href="#") Контакты
+            for item in list
+                li.nav__block(class=(item.title === activePage? 'active' : ''))
+                    a.nav__link(href=item.link)= item.title
+
     
     
         
