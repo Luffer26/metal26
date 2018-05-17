@@ -6,7 +6,41 @@ block header
     +header('Главная')
 block body
     div.page-main__wrapper
-        section.home
-    include layout/footer
+        section.production
+            .production__content
+                h1.content__header ПРОДУКЦИЯ
+        section.services
+            .services__content
+                h1.content__header Услуги
+        section.contacts_home
+            .contacts__content
+                
+                .contacts__wrapper
+                    .contacts__block
+                        h1.contacts__header КОНТАКТЫ
+                        .contacts__item
+                            
+                            p 
+                                i.icon.icon_phone-blue
+                                b  Телефон: 
+                                br
+                                |  +8 (918) 785-34-44
+                        .contacts__item
+                            p
+                                i.icon.icon_adress
+                                b Адрес:       
+                                br       
+                                | г. Ставрополь, ул. Ленина 208
+                                br 
+                        .contacts__item
+                            p
+                                i.icon.icon_mail-blue
+                                b Email: 
+                                br
+                                | info@stalcon.ru
+                    .contacts__map
+                        iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c524c668eb02e824e45746c5090531a13d223e4899ab33a5d555dfa3e4ebf78&amp;source=constructor" width="100%" height="600px" frameborder="0")                
+        include layout/footer
+    
     
     

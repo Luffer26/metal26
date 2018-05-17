@@ -5,5 +5,33 @@ block title
 block header
     +header('Контакты')
 block body
-    p priver
+    div.page-main__wrapper
+        section.contacts-page
+            .contacts__content
+                h1.content__header КОНТАКТЫ
+                .contacts__wrapper
+                    .content__text.contacts__text.block
+                        p 
+                            b Адрес:              
+                            br 
+                            | 355000, Россия, Ставропольский край 
+                            br 
+                            | г. Ставрополь, ул. Ленина 208
+                            br 
+
+                        p
+                            b  Телефон: 
+                            | +8 (918) 785-34-44
+                            br 
+                            b Email: 
+                            | info@stalcon.ru
+                    .contacts__form.block
+                        form(action="")
+                            input.field1(type="text" placeholder="Имя")
+                            input.field1(type="text" placeholder="Email")
+                            textarea(name="", cols="30", rows="5")
+                .contacts__map
+                    iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c524c668eb02e824e45746c5090531a13d223e4899ab33a5d555dfa3e4ebf78&amp;source=constructor" width="100%" height="350" frameborder="0")
+        include layout/footer
+
     

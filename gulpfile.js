@@ -33,7 +33,7 @@ gulp.task('sass', function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({
-        outputStyle: 'compressed'
+        /* outputStyle: 'compressed' */
     }))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],

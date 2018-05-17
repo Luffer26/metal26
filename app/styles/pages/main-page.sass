@@ -1,0 +1,42 @@
+.contacts
+    display: flex
+    &__item
+        flex: 1
+        p
+            width: 277px
+            padding: 10px 0
+        .icon
+            position: relative
+            float: left
+            margin: 8px 50px 8px 10px
+            &:after
+                position: absolute
+                display: block
+                content: ""
+                background-image: url(/img/sprite.png)
+                background-position: -423px 0px
+                width: 43px
+                height: 49px
+                top: 49%
+                left: 50%
+                transform: translate(-51%, -49%)
+    &__wrapper
+        position: relative
+        display: flex
+        .contacts__map
+            flex: 2
+            margin-bottom: 0
+    &__header
+        text-align: center
+        margin-bottom: 15px
+    &__block
+        background: rgba(255,255,255, .8)
+        padding: 50px 30px
+        left: 50%
+        top: 50%
+        transform: translate(-50%, -50%)        
+        position: absolute
+        flex-direction: column
+        flex: 1
+        padding-left: 25px
+    

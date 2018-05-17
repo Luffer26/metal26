@@ -8,17 +8,40 @@
     <title>Продукция</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="m-menu_close m-menu">
+      <nav class="m-menu__nav">
+        <ul class="nav">
+          <li class="nav__block"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__block"><a class="nav__link" href="about-company.html">О компании</a></li>
+          <li class="nav__block"><a class="nav__link" href="services.html">Услиги</a></li>
+          <li class="nav__block"><a class="nav__link" href="production.html">Продукция </a></li>
+          <li class="nav__block"><a class="nav__link" href="contacts.html">Контакты </a></li>
+        </ul>
+      </nav>
+      <aside class="sidebar">
+        <div class="sidebar__content">
+          <section class="callback">
+            <div class="callback__header">
+              <p>ОСТАВИТЬ ЗАЯВКУ</p>
+            </div>
+            <form class="callback-form" action="">
+              <input class="callback-form__input" type="text" placeholder="Ваше имя"/>
+              <input class="callback-form__input" type="text" placeholder="Ваш телефон"/>
+              <input class="callback-form__input" type="email" placeholder="Ваш Email"/>
+              <textarea class="callback-form__input callback-form__message" placeholder="Сообщение..."></textarea>
+              <input class="callback-form__submit" type="button" value="Отправить заявку"/>
+            </form>
+          </section>
+        </div>
+      </aside>
+    </div>
+    <div class="wrapper">       
       <header class="header">
         <div class="header__container">
           <div class="logo"> <a href="index.html">МЕТАЛ26</a></div>
           <div class="contacts">
-            <div class="contacts__mail block"><img class="icon icon_mail"/>
-              <p>metal26@yandex.ru</p>
-            </div>
-            <div class="contacts__number block"><i class="icon icon_phone"></i>
-              <p>+8(918)-785-34-44</p>
-            </div>
+            <div class="contacts__mail block"><img class="icon icon_mail"/><a href="mailto:metal26@yandex.ru">metal26@yandex.ru</a></div>
+            <div class="contacts__number block"><i class="icon icon_phone"></i><a href="tel:89187853444">+8(918)-785-34-44</a></div>
             <div class="contacts__callback-btn block">
               <button>Заказать звонок</button>
             </div>
@@ -57,7 +80,7 @@
             <section class="production">
               <div class="production__content">
                 <h1 class="content__header">ПРОДУКЦИЯ</h1>
-                <div class="content__text production_text">
+                <div class="content__text production__text">
                   <p>Компания ООО «Сталькон» занимается разработкой и производством металлоизделий, а также металлообработкой.</p>
                   <p>Одним из приоритетных направлений деятельности нашей компании является изготовление нестандартных корпусных изделий, которые разрабатываются конструкторским бюро на основании технического задания заказчика. А также имеется ряд разработанных серийных стендов (экспозиторов) для демонстрации в выставочных залах и магазинах различных строительных материалов, таких как керамическая плитка, двери, ламинат, линолеум, ковролин, сухие смеси.</p>
                   <p>Производство продукции проходит в несколько этапов. На первом этапе — создается проект будущего изделия. Далее выполняется раскрой металла на специальной лазерной установке либо координатно-пробивном прессе, после чего осуществляется гибка металла. При необходимости производится сварка (контактная, полуавтоматическая, в среде аргона, приварка метизов). Готовое изделие подвергается порошковой окраске для увеличения его эксплуатационных свойств. В заключении изделие проходит обязательный контроль качества и упаковывается.</p>
@@ -65,6 +88,18 @@
                 </div>
               </div>
             </section>
+            <footer class="footer">
+              <div class="footer__container">
+                <div class="lift">
+                  <div class="lift__btn"><i class="icon_lift icon"></i></div>
+                  <p>Наверх</p>
+                </div>
+                <div class="contacts">
+                  <div class="contacts__mail block"><a href="mailto:metal26@yandex.ru">metal26@yandex.ru</a></div>
+                  <div class="contacts__number block"><a href="tel:89187853444">+8(918)-785-34-44</a></div>
+                </div>
+              </div>
+            </footer>
           </div>
         </div>
       </div>

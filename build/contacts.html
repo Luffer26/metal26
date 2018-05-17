@@ -8,17 +8,40 @@
     <title>Контакты</title>
   </head>
   <body>
-    <div class="wrapper">
+    <div class="m-menu_close m-menu">
+      <nav class="m-menu__nav">
+        <ul class="nav">
+          <li class="nav__block"><a class="nav__link" href="index.html">Главная</a></li>
+          <li class="nav__block"><a class="nav__link" href="about-company.html">О компании</a></li>
+          <li class="nav__block"><a class="nav__link" href="services.html">Услиги</a></li>
+          <li class="nav__block"><a class="nav__link" href="production.html">Продукция </a></li>
+          <li class="nav__block"><a class="nav__link" href="contacts.html">Контакты </a></li>
+        </ul>
+      </nav>
+      <aside class="sidebar">
+        <div class="sidebar__content">
+          <section class="callback">
+            <div class="callback__header">
+              <p>ОСТАВИТЬ ЗАЯВКУ</p>
+            </div>
+            <form class="callback-form" action="">
+              <input class="callback-form__input" type="text" placeholder="Ваше имя"/>
+              <input class="callback-form__input" type="text" placeholder="Ваш телефон"/>
+              <input class="callback-form__input" type="email" placeholder="Ваш Email"/>
+              <textarea class="callback-form__input callback-form__message" placeholder="Сообщение..."></textarea>
+              <input class="callback-form__submit" type="button" value="Отправить заявку"/>
+            </form>
+          </section>
+        </div>
+      </aside>
+    </div>
+    <div class="wrapper">       
       <header class="header">
         <div class="header__container">
           <div class="logo"> <a href="index.html">МЕТАЛ26</a></div>
           <div class="contacts">
-            <div class="contacts__mail block"><img class="icon icon_mail"/>
-              <p>metal26@yandex.ru</p>
-            </div>
-            <div class="contacts__number block"><i class="icon icon_phone"></i>
-              <p>+8(918)-785-34-44</p>
-            </div>
+            <div class="contacts__mail block"><img class="icon icon_mail"/><a href="mailto:metal26@yandex.ru">metal26@yandex.ru</a></div>
+            <div class="contacts__number block"><i class="icon icon_phone"></i><a href="tel:89187853444">+8(918)-785-34-44</a></div>
             <div class="contacts__callback-btn block">
               <button>Заказать звонок</button>
             </div>
@@ -53,7 +76,41 @@
           </div>
         </aside>
         <div class="page-main">
-          <p>priver</p>
+          <div class="page-main__wrapper">
+            <section class="contacts-page">
+              <div class="contacts__content">
+                <h1 class="content__header">КОНТАКТЫ</h1>
+                <div class="contacts__wrapper">
+                  <div class="content__text contacts__text block">
+                    <p> <b>Адрес:              </b><br/>355000, Россия, Ставропольский край <br/>г. Ставрополь, ул. Ленина 208<br/></p>
+                    <p><b> Телефон: </b>+8 (918) 785-34-44<br/><b>Email: </b>info@stalcon.ru</p>
+                  </div>
+                  <div class="contacts__form block">
+                    <form action="">
+                      <input class="field1" type="text" placeholder="Имя"/>
+                      <input class="field1" type="text" placeholder="Email"/>
+                      <textarea name="" cols="30" rows="5"></textarea>
+                    </form>
+                  </div>
+                </div>
+                <div class="contacts__map">
+                  <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c524c668eb02e824e45746c5090531a13d223e4899ab33a5d555dfa3e4ebf78&amp;amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
+                </div>
+              </div>
+            </section>
+            <footer class="footer">
+              <div class="footer__container">
+                <div class="lift">
+                  <div class="lift__btn"><i class="icon_lift icon"></i></div>
+                  <p>Наверх</p>
+                </div>
+                <div class="contacts">
+                  <div class="contacts__mail block"><a href="mailto:metal26@yandex.ru">metal26@yandex.ru</a></div>
+                  <div class="contacts__number block"><a href="tel:89187853444">+8(918)-785-34-44</a></div>
+                </div>
+              </div>
+            </footer>
+          </div>
         </div>
       </div>
     </div>
