@@ -6,20 +6,79 @@ block header
     +header('Главная')
 block body
     div.page-main__wrapper
-        section.production
-            .production__content
-                h1.content__header ПРОДУКЦИЯ
-        section.services
-            .services__content
-                h1.content__header Услуги
+        section.slider
+            ul.slider__list
+                - 
+                    var imglist = [
+                    { img: '1', text: 'Плазменная резка листового металла'},
+                    { img: '2', text: 'Порошковая покраска'},
+                    { img: '3', text: 'Сварочные работы'},
+                    { img: '4', text: 'Разработка Конструкторской документации'},
+                    { img: '5', text: 'Металлические корпуса приборов различного назначения.'},
+                    { img: '6', text: 'Экспозиторы (стенды) для презентаций строительных материалов'},]
+                for item in imglist
+                    li.slider-item
+                        
+                        .slider-item__text
+                            p #{item.text}
+                        img.slider-item__img(src=`img/${item.img}.jpg`, alt=`${item.text}`)
+            ul.slider-dots
+                li.slider-dots__item.dot_active
+                    i.icon.icon_dot-1
+                li.slider-dots__item
+                    i.icon.icon_dot-2
+                li.slider-dots__item
+                    i.icon.icon_dot-3
+                li.slider-dots__item
+                    i.icon.icon_dot-4
+                li.slider-dots__item
+                    i.icon.icon_dot-5
+                li.slider-dots__item
+                    i.icon.icon_dot-6
+                    
+
+        section.support
+            .support__content
+                h1.content__header ПОЛНЫЙ ЦИКЛ СОПРОВОЖДЕНИЯ ПРОЕКТА
+                ul.support__list
+                    li.support__item
+                        .support__img
+                            i.icon.icon_support-1
+                            span.support__num 1
+                        p Мы получаем заявку
+                    li.support__item
+                        .support__img
+                            i.icon.icon_support-2
+                            span.support__num 2
+                        p Наш менеджер связывается с Вами, чтобы обговорить возможность производства детали
+                    li.support__item
+                        .support__img
+                            i.icon.icon_support-3
+                            span.support__num 3
+                        p Наш экономист просчитывает стоимость проекта
+                    li.support__item
+                        .support__img
+                            i.icon.icon_support-4
+                            span.support__num 4
+                        P Наш менеджер обговаривает с Вами стоимость детали
+                    li.support__item
+                        .support__img
+                            i.icon.icon_support-5
+                            span.support__num 5
+                        p Мы работаем с заказом
+                    li.support__item
+                        .support__img
+                            i.icon.icon_support-6
+                            span.support__num 6
+                        p И доставляем его Вам
+                
         section.contacts_home
             .contacts__content
-                
                 .contacts__wrapper
                     .contacts__block
+                        .contacts__close-btn 
                         h1.contacts__header КОНТАКТЫ
                         .contacts__item
-                            
                             p 
                                 i.icon.icon_phone-blue
                                 b  Телефон: 

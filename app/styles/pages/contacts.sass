@@ -1,5 +1,6 @@
 .contacts
     &__text
+        float: left
         p
             margin-bottom: 16px
         p:last-child
@@ -7,11 +8,34 @@
     &__map
         margin-bottom: 20px
     &__wrapper
-        display: flex
+        display: inline-block
+        width: 100%   
+            
     &__form
-        display: flex
-        flex-direction: column
-        .field1
-            display: block
+        float: right
+        &-text
+            font-size: 20px
+            font-weight: bold
+.form__wrapper
+
+    display: flex
+    .field1
+        flex: 1
+        max-width: 200px
+        
+        padding-right: 10px
+        input
+            width: 100%
+            height: 24px
+            margin-bottom: 5px
+    .field2
+        flex: 1
+        margin-right: 20px
+        max-width: 200px
         textarea
-            float: right
+                width: 100%
+                height: 59px
+.contacts__form-btn
+    float: right
+    margin: 10px 20px 0 0
+        

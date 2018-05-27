@@ -85,4 +85,4 @@ gulp.task('watch', function () {
     gulp.watch("build/*.html").on("change", reload);
 });
 
-gulp.task('default', ['server', 'sass', 'pug', 'font', 'watch', 'script'])
+gulp.task('default', ['sass', 'pug', 'font', 'watch','server', 'script'])

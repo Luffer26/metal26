@@ -43,16 +43,17 @@
         flex: 1
         
     &__callback-btn
-        button
-            color: #fff
-            cursor: pointer
-            margin: auto 0
-            background: linear-gradient(to top, #1e5e80 0%, #48869f 14%, #92cdd9 100%)
-            width: 180px
-            height: 36px
-            border: 0
-            border-radius: 8px
-            padding: 0
+        line-height: 36px
+        text-align: center
+        color: #fff
+        cursor: pointer
+        margin: auto 0
+        background: linear-gradient(to top, #1e5e80 0%, #48869f 14%, #92cdd9 100%)
+        width: 180px
+        height: 36px
+        border: 0
+        border-radius: 8px
+        padding: 0
 
 .active
     background: #1f3e53
@@ -60,10 +61,10 @@
     display: none
     width: 60px
     height: 45px
-    position: relative
+    position: absolute
+    right: 20px
     margin: 50px auto
     transform: rotate(0deg)
-    transition: .5s ease-in-out
     cursor: pointer
     span
         display: block
@@ -99,6 +100,7 @@
             transform: rotate(-135deg)
 
 .m-menu
+    min-width: 300px
     position: absolute
     width: 100%
     z-index: 9998

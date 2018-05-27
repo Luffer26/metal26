@@ -3,9 +3,9 @@ aside.sidebar
         section.callback
             .callback__header
                 p ОСТАВИТЬ ЗАЯВКУ
-            form.callback-form(action="")
-                input.callback-form__input(type="text" placeholder="Ваше имя")
-                input.callback-form__input(type="text" placeholder="Ваш телефон")
-                input.callback-form__input(type="email" placeholder="Ваш Email")
-                textarea.callback-form__input.callback-form__message(placeholder="Сообщение...")
-                input.callback-form__submit(type="button" value="Отправить заявку") 
+            form.callback-form(method="post" action="/")
+                input.callback-form__input(type="text" name="name" placeholder="Ваше имя" required)
+                input.callback-form__input(type="text" name="phoneNumber" placeholder="Ваш телефон" required)
+                input.callback-form__input(type="email" name="email" placeholder="Ваш Email" required)
+                textarea.callback-form__input.callback-form__message(placeholder="Сообщение..." name="message")
+                input.callback-form__submit(type="submit" value="Отправить заявку") 

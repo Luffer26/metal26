@@ -1,29 +1,25 @@
 - 
     var list = [
-    { title: 'Главная', link: 'index.html' },
+    { title: 'Главная', link: '/' },
     { title: 'О компании', link: 'about-company.html' },
     { title: 'Услиги', link: 'services.html' },
     { title: 'Продукция ', link: 'production.html' },
     { title: 'Контакты ', link: 'contacts.html' }
-  ]
+ ]
 mixin header(activePage)
     header.header
         .header__container
             .logo 
-                a(href="index.html") МЕТАЛ26
+                a(href="/") МЕТАЛ26
             .contacts
                 .contacts__mail.block
-                    img.icon.icon_mail
-                    a(href="mailto:metal26@yandex.ru") metal26@yandex.ru
+                    i.icon.icon_mail
+                    a(href="mailto:metal26@mail.ru") metal26@mail.ru
                 .contacts__number.block
                     i.icon.icon_phone
                     a(href="tel:89187853444") +8(918)-785-34-44
-                .contacts__callback-btn.block
-                    button Заказать звонок
-            .menu-btn
-                span
-                span
-                span
+                .contacts__callback-btn.block 
+                    |Заказать звонок
             
     nav.header__nav
         ul.nav

@@ -11,14 +11,25 @@ html(lang="ru")
       title Главная
 
   body
+    .callback-popup.callback-popup_close
+      form.callback-popup__form(method="post" action="/")
+        .close-btn ЗАКРЫТЬ
+        h2.callback-popup__header Заказ звонка
+        input.callback-popup__input(type="text" name="name" placeholder="Имя" required)
+        input.callback-popup__input(type="text" name="phoneNumber" placeholder="Телефон" required)
+        input.callback-form__submit(type="submit" value="Отправить")
+    .menu-btn
+                span
+                span
+                span
     .m-menu_close.m-menu
         nav.m-menu__nav
           ul.nav
               for item in list
                   li.nav__block(class=(item.title === activePage? 'active' : ''))
                       a.nav__link(href=item.link)= item.title
-        include sidebar
-    .wrapper        
+        include sidebar         
+    .wrapper
       block header
       .main-content
         include sidebar

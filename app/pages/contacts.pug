@@ -10,7 +10,7 @@ block body
             .contacts__content
                 h1.content__header КОНТАКТЫ
                 .contacts__wrapper
-                    .content__text.contacts__text.block
+                    .content__text.contacts__text
                         p 
                             b Адрес:              
                             br 
@@ -25,11 +25,17 @@ block body
                             br 
                             b Email: 
                             | info@stalcon.ru
-                    .contacts__form.block
-                        form(action="")
-                            input.field1(type="text" placeholder="Имя")
-                            input.field1(type="text" placeholder="Email")
-                            textarea(name="", cols="30", rows="5")
+                    .contacts__form
+                        span.contacts__form-text Напишите нам
+                        form(method="post" action="/contacts")
+                            .form__wrapper
+                                .field1
+                                    input(type="text" name="name" placeholder="Имя" required )
+                                    input(type="text" name="email" placeholder="Email" required)
+                                .field2
+                                    textarea(placeholder="Сообщение" name="message")
+                            .contacts__form-btn
+                                input(type="submit")
                 .contacts__map
                     iframe(src="https://yandex.ru/map-widget/v1/?um=constructor%3A6c524c668eb02e824e45746c5090531a13d223e4899ab33a5d555dfa3e4ebf78&amp;source=constructor" width="100%" height="350" frameborder="0")
         include layout/footer

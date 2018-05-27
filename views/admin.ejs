@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/main.min.css">
+    <title>Административная панель</title>
+</head>
+<body> 
+    <div class="wrapper">
+        <header class="admin-header">
+            <div class="admin-header__container">
+                <span>Административная панель</span>
+                <a class="admin__back-btn" href="/">Вернуться на сайт</a>
+            </div>
+        </header>
+        <div class="admin-content">
+            <div class="admin-content__container">
+                <% posts.forEach(function(post){ %>
+                    <div class="application">
+                        <span><%= post.name %></span>
+                        <div class="admin__data hidden">
+                            <p><%= post.phoneNumber %></p><br>
+                            <p><%= post.email %></p><br>
+                            <p><%= post.message %></p><br>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+</html>
