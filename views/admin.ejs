@@ -7,25 +7,34 @@
     <link rel="stylesheet" href="style/main.min.css">
     <title>Административная панель</title>
 </head>
-<body> 
+<body class="admin"> 
     <div class="wrapper">
         <header class="admin-header">
             <div class="admin-header__container">
-                <span>Административная панель</span>
+                <span class="admin-logo">Административная панель</span>
                 <a class="admin__back-btn" href="/">Вернуться на сайт</a>
             </div>
         </header>
         <div class="admin-content">
             <div class="admin-content__container">
                 <% posts.forEach(function(post){ %>
-                    <div class="application">
-                        <span><%= post.name %></span>
-                        <div class="admin__data hidden">
-                            <p><%= post.phoneNumber %></p><br>
-                            <p><%= post.email %></p><br>
-                            <p><%= post.message %></p><br>
+                    <div class="client">
+                        <div class="client__name">
+                            <span><%= post.name %></span>
+                            <form class="form-delete" method="post">
+                                <input type="text" name="_id" hidden value=<%= post._id %>>
+                                <input type="submit" class=".del-btn" value="удалить">
+                            </form>
+                        </div>
+                        <div class="client__data hidden">
+                            <p>Имя - <%= post.name %></p><br>
+                            <p>Телефон - <%= post.phoneNumber %></p><br>
+                            <p>Почта - <%= post.email %></p><br>
+                            <p>Сообщение - <%= post.message %></p><br>
                         </div>
                     </div>
+                    
+                    
                 <% }); %>
             </div>
         </div>

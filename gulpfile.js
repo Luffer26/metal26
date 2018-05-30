@@ -39,7 +39,7 @@ gulp.task('sass', function () {
         browsers: ['last 2 versions'],
         cascade: false
     }))
-/*     .pipe(cssnano()) */
+    .pipe(cssnano())
     .pipe(rename('main.min.css'))
     .pipe(sourcemaps.write('/maps'))
     .pipe(gulp.dest('build/style'));
@@ -49,7 +49,7 @@ gulp.task("pug", function() {
     return gulp.src(['app/pages/*.pug'])
         .pipe(plumber())
         .pipe(pug({
-            pretty: true
+            pretty: false
         }))
         .pipe(gulp.dest('build'))
 });
