@@ -33,7 +33,7 @@ gulp.task('sass', function () {
     .pipe(plumber())
     .pipe(sourcemaps.init())
     .pipe(sass({
-        /* outputStyle: 'compressed' */
+        outputStyle: 'compressed'
     }))
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
@@ -49,7 +49,7 @@ gulp.task("pug", function() {
     return gulp.src(['app/pages/*.pug'])
         .pipe(plumber())
         .pipe(pug({
-            pretty: false
+            pretty: true
         }))
         .pipe(gulp.dest('build'))
 });

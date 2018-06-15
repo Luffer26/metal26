@@ -13,12 +13,7 @@ $(function () {
             $(dots[0]).addClass("dot_active")
             $('.slider__list').css('transform', 'translate(0, 0)');
             slideNow = 1;
-            slideDot = 0
         } else {
-            
-            $(dots[++slideDot]).addClass("dot_active")
-            $(dots[slideDot]).siblings(".dot_active").removeClass("dot_active")
-
             translateWidth = -$('.slider').width() * (slideNow);
             $('.slider__list').css({
                 'transform': 'translate(' + translateWidth + 'px, 0)',
@@ -26,6 +21,9 @@ $(function () {
                 '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
             });
             slideNow++;
+            slideDot = slideNow - 1
+            $(dots[slideDot]).addClass("dot_active")
+            $(dots[slideDot]).siblings(".dot_active").removeClass("dot_active")           
         }
     }
 
@@ -41,6 +39,7 @@ $(function () {
                 '-ms-transform': 'translate(' + translateWidth + 'px, 0)',
             });
             slideNow = navBtnId + 1;
+            console.log(slideNow)
         }
     });
     setInterval(nextSlide, slideInterval);

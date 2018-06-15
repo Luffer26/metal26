@@ -10,9 +10,8 @@
     .advantages__description
         margin-top: 13px
         font-size: inherit
-    .slider-dots
-        min-width: 100%
-        text-align: center
+    .services-list__item:nth-child(2n+2)
+        top: 81px    
 @media (max-width: 1024px)
     .contacts, .header__nav, .sidebar
         display: none
@@ -30,8 +29,20 @@
         margin: 0
         max-width: 100%
         text-align: center
-
+    .services-list
+        width: 445px
+        height: 100%
+        margin: 0 auto
+    .services-list__item:nth-child(2)
+        top: 81px 
+    .services-list__item:nth-child(4)
+        top: 18px 
+    .services-list__item:nth-child(5)
+        top: 18px
+        left: 136px
 @media (max-width: 768px)
+    .content__text
+        padding: 0 50px
     .about
         flex-direction: column
     .header
@@ -40,15 +51,24 @@
             line-height: 125px
     .menu-btn
         margin: 40px 0
-
     .contacts__form
         padding: 0 20px
         float: unset
     .contacts__text
         float: unset
     .slider-item__img
-        height: 338px
+        height: 388px
+    .slider-item__text
+        left: 5px
+        font-size: 25px
+    .slider-dots
+        position: unset
+        top: 10px
 @media (max-width: 425px)
+    .content__text
+        padding: 0 15px
+    .slider-dots
+        min-width: 350px 
     .contacts__block
         padding: 0 
         background: #fff
@@ -57,3 +77,17 @@
         transform: translate(-50%, 0)
     .contacts__item
             padding: 0 15px
+
+@media (max-width: 480px)
+    .services-list
+        width: 300px
+    .services-list__item:nth-child(2n+2)
+        top: 78px
+    .services-list__item:nth-child(2n+1)
+        margin-bottom: 10px
+    .services__block
+        height: 500px
+        background-size: cover
+    .services-list__item:nth-child(5)
+        left: unset
+        top: unset
