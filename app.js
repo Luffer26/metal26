@@ -3,7 +3,7 @@ const bodyParser = require("body-parser")
 const pug = require("pug")
 
 const Post = require("./routes/post")
-const Server = require("./server.js")
+const bd = require("./bd.js")
 const app = express()
 
 var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
@@ -13,6 +13,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('build'));
 app.set("view engine", "ejs");
 
+app.listen(server_port, server_ip_address, function(){
+    console.log("Listening on " + server_ip_address + ", server_port " + server_port)
+})
 app.post('/', function (req, res) {
     const {name, phoneNumber, email, message} = req.body
     Post.create({
