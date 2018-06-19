@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/style/main.min.css">
+    <title>Авторизация</title>
+</head>
+<body> 
+    <div class="authorization">
+        <div class="authorization-header">
+            <p>Панель администрирования</p>
+        </div>
+        <div class="authorization-main">
+            <form action='/admin/login' method='post'>
+                <label for='username'>Имя пользователя: </label>
+                <input class="username" type='text' name='username' ><br>
+                <label for='password'>Пароль: </label>
+                <input class="password" type='password' name='password' ><br>
+                <input class="login-submit" type='submit' value="Войти">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

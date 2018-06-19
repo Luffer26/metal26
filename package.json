@@ -28,5 +28,6 @@
   },
   "scripts": {
     "start": "nodemon app.js"
-  }
+  },
+  "main": "app.js"
 }
